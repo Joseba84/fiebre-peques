@@ -1,0 +1,13 @@
+<ion-view view-title="Dosis">
+  <ion-content class="padding">
+    <ion-item ng-repeat="drug in drugs" type="item-text-wrap">
+      <div class="item item-button-right">
+        {{drug.name}}
+        <button class="button button-calm">
+          <p>0</p>
+        </button>
+      </div>
+    </ion-item>
+
+  </ion-content>
+</ion-view>
