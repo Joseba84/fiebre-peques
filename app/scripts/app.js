@@ -1,8 +1,7 @@
 'use strict';
 // mobile app FiebrePeques
 
-angular.module('fiebrePeques', ['ionic', 'fiebrePeques.controllers', 'fiebrePeques.services'])
-
+angular.module('fiebrePeques', ['ionic', 'fiebrePeques.controllers', 'fiebrePeques.services','fiebrePeques.directives'])
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -40,21 +39,21 @@ angular.module('fiebrePeques', ['ionic', 'fiebrePeques.controllers', 'fiebrePequ
     }
   })
 
-  .state('tab.follow', {
-      url: '/follow',
+  .state('tab.follows', {
+      url: '/follows',
       views: {
-        'tab-follow': {
-          templateUrl: 'templates/tab-follow.html',
-          controller: 'FollowCtrl'
+        'tab-follows': {
+          templateUrl: 'templates/tab-follows.html',
+          controller: 'FollowsCtrl'
         }
       }
     })
-    .state('tab.chat-detail', {
-      url: '/chats/:chatId',
+    .state('tab.follow-detail', {
+      url: '/follows/:followId',
       views: {
-        'tab-chats': {
-          templateUrl: 'templates/chat-detail.html',
-          controller: 'ChatDetailCtrl'
+        'tab-follows': {
+          templateUrl: 'templates/follow-detail.html',
+          controller: 'FollowDetailCtrl'
         }
       }
     });

@@ -3,18 +3,23 @@ angular.module('fiebrePeques.services', [])
 .factory('Drugs', function(){
   var drugs = [{
     name: 'Apiretal 100mg',
+    value: '0',
     prospectus: ''
   }, {
    name: 'Dalsy 20mg',
+   value: '0',
    prospectus: ''
  }, {
   name: 'Dalsy 40mg',
+  value: '0',
   prospectus: ''
 }, {
  name: 'Junifen 20mg',
+ value: '0',
  prospectus: ''
 }, {
  name: 'Junifen 40mg',
+ value: '0',
  prospectus: ''
 }];
 
@@ -25,11 +30,11 @@ return {
 };
 })
 
-.factory('Chats', function() {
+.factory('Follows', function() {
   // Might use a resource here that returns a JSON array
 
   // Some fake testing data
-  var chats = [{
+  var follows = [{
     id: 0,
     name: 'Ben Sparrow',
     lastText: 'You on your way?',
@@ -48,15 +53,15 @@ return {
 
   return {
     all: function() {
-      return chats;
+      return follows;
     },
-    remove: function(chat) {
-      chats.splice(chats.indexOf(chat), 1);
+    remove: function(follow) {
+      follows.splice(follows.indexOf(follow), 1);
     },
-    get: function(chatId) {
-      for (var i = 0; i < chats.length; i++) {
-        if (chats[i].id === parseInt(chatId)) {
-          return chats[i];
+    get: function(followId) {
+      for (var i = 0; i < follows.length; i++) {
+        if (follows[i].id === parseInt(followId)) {
+          return follows[i];
         }
       }
       return null;

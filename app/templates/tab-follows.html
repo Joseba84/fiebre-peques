@@ -1,0 +1,16 @@
+<ion-view view-title="Seguimiento">
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="follow in follows" type="item-text-wrap" href="#/tab/follows/{{follow.id}}">
+        <img ng-src="{{follow.face}}">
+        <h2>{{follow.name}}</h2>
+        <p>{{follow.lastText}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+        <button class="button-assertive" ng-click="remove(follow)">
+          Delete
+        </button>
+
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

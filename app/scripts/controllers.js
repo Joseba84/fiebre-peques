@@ -6,13 +6,13 @@ angular.module('fiebrePeques.controllers', [])
   $scope.drugs = Drugs.all();
 })
 
-.controller('FollowCtrl', function($scope, Chats) {
-  $scope.chats = Chats.all();
-  $scope.remove = function(chat) {
-    Chats.remove(chat);
+.controller('FollowsCtrl', function($scope, Follows) {
+  $scope.follows = Follows.all();
+  $scope.remove = function(follow) {
+    Follows.remove(follow);
   };
 })
 
-.controller('FollowDetailCtrl', function($scope, $stateParams, Chats) {
-  $scope.chat = Chats.get($stateParams.chatId);
+.controller('FollowDetailCtrl', function($scope, $stateParams, Follows) {
+  $scope.follow = Follows.get($stateParams.followId);
 });
